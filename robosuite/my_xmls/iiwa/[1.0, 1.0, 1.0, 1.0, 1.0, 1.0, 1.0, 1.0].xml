@@ -1,0 +1,95 @@
+<mujoco model="iiwa7">
+    <actuator>
+        
+        
+        <motor ctrllimited="true" ctrlrange="-176.0 176.0" joint="joint_1" name="torq_j1" />
+        <motor ctrllimited="true" ctrlrange="-176.0 176.0" joint="joint_2" name="torq_j2" />
+        <motor ctrllimited="true" ctrlrange="-110.0 110.0" joint="joint_3" name="torq_j3" />
+        <motor ctrllimited="true" ctrlrange="-110.0 110.0" joint="joint_4" name="torq_j4" />
+        <motor ctrllimited="true" ctrlrange="-110.0 110.0" joint="joint_5" name="torq_j5" />
+        <motor ctrllimited="true" ctrlrange="-40.0 40.0" joint="joint_6" name="torq_j6" />
+        <motor ctrllimited="true" ctrlrange="-40.0 40.0" joint="joint_7" name="torq_j7" />
+    </actuator>
+    <asset>
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_0.stl" name="link_0" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_1.stl" name="link_1" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_2.stl" name="link_2" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_3.stl" name="link_3" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_4.stl" name="link_4" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_5.stl" name="link_5" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_6.stl" name="link_6" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_7.stl" name="link_7" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_0_vis.stl" name="link_0_vis" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_1_vis.stl" name="link_1_vis" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_2_vis.stl" name="link_2_vis" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_3_vis.stl" name="link_3_vis" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_4_vis.stl" name="link_4_vis" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_5_vis.stl" name="link_5_vis" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_6_vis.stl" name="link_6_vis" />
+        <mesh file="/home/lthpc/Desktop/meta-role/robosuite/robosuite/models/assets/robots/iiwa/meshes/link_7_vis.stl" name="link_7_vis" />
+    </asset>
+    <worldbody>
+        <body name="base" pos="0 0 0">
+            
+            <camera mode="fixed" name="robotview" pos="1.0 0 0.4" quat="0.653 0.271 0.271 0.653" />
+            <inertial diaginertia="0 0 0" mass="0.0" pos="0 0 0" />
+            
+            <geom conaffinity="0" contype="0" group="1" mesh="link_0_vis" name="link_0_visual" pos="0 0 0" rgba="0.4 0.4 0.4 1" type="mesh" />
+            <geom contype="0" mesh="link_0" name="link_0_collision" pos="0 0 0" rgba="" type="mesh" />
+            <body name="link_1" pos="0 0 0.15">
+                <inertial diaginertia="0.0218946 0.02183 0.00663837" mass="3.4525" pos="0 -0.03 0.12" quat="0.428904 0.562175 -0.562175 0.428904" />
+                <joint axis="0 0 1" damping="0.1" limited="true" name="joint_1" pos="0 0 0" range="-2.96706 2.96706" />
+                <geom conaffinity="0" contype="0" group="1" mesh="link_1_vis" name="link_1_visual" pos="0 0 0.0075" rgba="0.4 0.4 0.4 1" type="mesh" />
+                <geom contype="0" mesh="link_1" name="link_1_collision" pos="0 0 0.0075" rgba="" type="mesh" />
+                <body name="link_2" pos="0 0 0.19" quat="0 0 0.707107 0.707107">
+                    <inertial diaginertia="0.02179 0.0217049 0.00684512" mass="3.4821" pos="0.0003 0.059 0.042" quat="0.701371 0.0898824 0.0898824 0.701371" />
+                    <joint axis="0 0 1" damping="0.1" limited="true" name="joint_2" pos="0 0 0" range="-2.0944 2.0944" />
+                    <geom conaffinity="0" contype="0" group="1" mesh="link_2_vis" name="link_2_visual" rgba="1 0.423529 0.0392157 1" type="mesh" />
+                    <geom contype="0" mesh="link_2" name="link_2_collision" rgba="" type="mesh" />
+                    <body name="link_3" pos="0 0.21 0" quat="0 0 0.707107 0.707107">
+                        <inertial diaginertia="0.0321488 0.03204 0.00799117" mass="4.05623" pos="0 0.03 0.13" quat="0.56292 0.427927 -0.427927 0.56292" />
+                        <joint axis="0 0 1" damping="0.1" limited="true" name="joint_3" pos="0 0 0" range="-2.96706 2.96706" />
+                        <geom conaffinity="0" contype="0" group="1" mesh="link_3_vis" name="link_3_visual" pos="0 0 -0.026" rgba="0.4 0.4 0.4 1" type="mesh" />
+                        <geom contype="0" mesh="link_3" name="link_3_collision" pos="0 0 -0.026" rgba="" type="mesh" />
+                        <body name="link_4" pos="0 0 0.19" quat="0.707107 0.707107 0 0">
+                            <inertial diaginertia="0.02178 0.0216947 0.00684029" mass="3.4822" pos="0 0.067 0.034" quat="0.991887 -0.127124 0 0" />
+                            <joint axis="0 0 1" damping="0.1" limited="true" name="joint_4" pos="0 0 0" range="-2.0944 2.0944" />
+                            <geom conaffinity="0" contype="0" group="1" mesh="link_4_vis" name="link_4_visual" rgba="1 0.423529 0.0392157 1" type="mesh" />
+                            <geom contype="0" mesh="link_4" name="link_4_collision" rgba="" type="mesh" />
+                            <body name="link_5" pos="0 0.21 0" quat="0 0 0.707107 0.707107">
+                                <inertial diaginertia="0.0131987 0.01287 0.0036293" mass="2.1633" pos="0.0001 0.021 0.076" quat="0.365352 0.605407 -0.605407 0.365352" />
+                                <joint axis="0 0 1" damping="0.1" limited="true" name="joint_5" pos="0 0 0" range="-2.96706 2.96706" />
+                                <geom conaffinity="0" contype="0" group="1" mesh="link_5_vis" name="link_5_visual" pos="0 0 -0.026" rgba="0.4 0.4 0.4 1" type="mesh" />
+                                <geom contype="0" mesh="link_5" name="link_5_collision" pos="0 0 -0.026" rgba="" type="mesh" />
+                                <body name="link_6" pos="0 0.0607 0.19" quat="0.707107 0.707107 0 0">
+                                    <inertial diaginertia="0.006509 0.00631585 0.00447015" mass="2.3466" pos="0 0.0006 0.0004" quat="0.996112 0.088097 0 0" />
+                                    <joint axis="0 0 1" damping="0.1" limited="true" name="joint_6" pos="0 0 0" range="-2.0944 2.0944" />
+                                    <geom conaffinity="0" contype="0" group="1" mesh="link_6_vis" name="link_6_visual" rgba="1 0.423529 0.0392157 1" type="mesh" />
+                                    <geom contype="0" mesh="link_6" name="link_6_collision" rgba="" type="mesh" />
+                                    <body name="link_7" pos="0 0.081 0.0607" quat="0 0 0.707107 0.707107">
+                                        <inertial diaginertia="0.0152362 0.0140538 0.002872" mass="3.129" pos="0 0 0.02" quat="0.923068 0 0 0.384636" />
+                                        <joint axis="0 0 1" damping="0.1" limited="true" name="joint_7" pos="0 0 0" range="-3.05433 3.05433" />
+                                        <geom conaffinity="0" contype="0" group="1" mesh="link_7_vis" name="link_7_visual" pos="0 0 -0.0005" rgba="0.4 0.4 0.4 1" type="mesh" />
+                                        <geom contype="0" mesh="link_7" name="link_7_collision" pos="0 0 -0.0005" rgba="" type="mesh" />
+                                        <body name="right_hand" pos="0 0 0.044">
+                                            
+                                            
+                                            
+                                            <site group="1" name="ee" pos="0 0 0" rgba="0 0 1 1" size="0.01 0.01 0.01" type="sphere" />
+                                            <site group="1" name="ee_x" pos="0 0 0" quat="0.707105 0.707108 0 0 " rgba="1 0 0 0" size="0.005 .1" type="cylinder" />
+                                            <site group="1" name="ee_z" pos="0 0 0" quat="0.707105 0 0 0.707108" rgba="0 0 1 0" size="0.005 .1" type="cylinder" />
+                                            <site group="1" name="ee_y" pos="0 0 0" quat="0.707105 0 0.707108 0 " rgba="0 1 0 0" size="0.005 .1" type="cylinder" />
+                                            
+                                            <camera fovy="75" mode="fixed" name="eye_in_hand" pos="0.05 0 0" quat="0 0.707108 0.707108 0" />
+                                            
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+<sensor /><tendon /><equality /><contact /><default /></mujoco>
